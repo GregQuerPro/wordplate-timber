@@ -3,3 +3,4 @@
 /vendor
 auth.json
 /public/wordpress
+.editorconfig

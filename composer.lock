@@ -1221,24 +1221,6 @@
             "time": "2022-10-16T01:01:54+00:00"
         },
         {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "6.1.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/6.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.1.7.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
-        },
-        {
             "name": "wpackagist-plugin/clean-image-filenames",
             "version": "1.4",
             "source": {

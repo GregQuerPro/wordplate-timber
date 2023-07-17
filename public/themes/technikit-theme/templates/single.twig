@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<img src="{{ post.thumbnail.src|resize(800, 300) }}">
+			<section class="article-content">
+				<h1 class="article-h1">{{ _e(post.title) }}</h1>
+				<p class="blog-author">
+					<span>Auteur: </span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date|date("d/m/Y") }}</time>
+				</p>
+				<div class="article-body">
+					{{_e(post.content)}}
+				</div>
+			</section>
+
+			<!-- comment box -->
+			<section class="comment-box">
+				<!-- comments -->
+				<div class="comments">
+				    {% if post.comments %}
+					<h3> Commentaires </h3>
+					{% for cmt in post.comments %}
+					    {% include "comment.twig" with {comment:cmt} %}
+					{% endfor %}
+				    {% endif %}
+				</div>
+
+				{% if post.comment_status == "closed" %}
+					<p> Les commentaires pour cette publication sont fermées </p>
+				{% else %}
+				    <!-- comment form -->
+				    {% include "comment-form.twig" %}
+				{% endif %}
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

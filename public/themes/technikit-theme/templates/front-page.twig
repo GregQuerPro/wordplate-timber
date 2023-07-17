@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<h1>{{ _e(home.title) }}</h1>
+<p>{{ _e(home.content) }}</p>
+<div>
+  {% if home.thumbnail %}
+    <img src="{{ home.thumbnail.src }}" alt="{{ home.thumbnail.alt }}" width="300px" />
+  {% endif %}
+</div>
+
+{% for post in posts %}
+<h2 class="h2"><a href="{{post.link}}">{{_e(post.title)}}</a></h2>
+		{% if post.thumbnail.src %}
+			<img src="{{post.thumbnail.src}}" width="300px" />
+		{% endif %}
+{% endfor %}
+
+{% endblock %}
+

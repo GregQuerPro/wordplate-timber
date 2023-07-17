@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "sass": "^1.63.6",
+    "vite": "^4.3.8",
+    "vite-plugin-sass": "^0.1.0"
+  }
+}
